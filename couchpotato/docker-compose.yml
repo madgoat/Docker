@@ -1,8 +1,10 @@
 ---
 couchpotato:
     build: .
+    image: "madgoat/couchpotato"
     container_name: 'couchpotato'
     volumes:
-        - './data/datadir:/datadir'
-        - './data/media:/media'
-    restart: 'always'
+        - '/mnt/media-server/couchpotato:/datadir'
+        - '/mnt/media-server/movies:/media'
+    ports: "5050:505"
+    restart: always
