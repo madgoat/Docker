@@ -1,0 +1,12 @@
+sonarr:
+    image: madgoat/sonarr
+    ports:
+      - "8989:8989"
+    net: "host"
+    container_name: sonarr
+    volumes:
+            - /mnt/media-server/tv:/tv
+            - /mnt/media-server/sconfig:/config
+            - /mnt/media-server/completed:/completed
+            - /mnt/media-server/downloads:/downloads
+    restart: always

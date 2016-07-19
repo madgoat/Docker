@@ -1,0 +1,12 @@
+nzbget:
+    image: madgoat/nzbget
+    ports:
+      - "6789:6789"
+    net: "host"
+    container_name: nzbget
+    volumes:
+            - /mnt/media-server/tv:/tv
+            - /mnt/media-server/movies:/movies
+            - /mnt/media-server/downloads:/downloads
+            - /mnt/media-server/nconfig:/config
+    restart: always
