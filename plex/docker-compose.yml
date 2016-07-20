@@ -1,0 +1,11 @@
+plex:
+    image: madgoat/plex
+    ports:
+      - "32400:32400"
+    net: "host"
+    container_name: plex
+    volumes:
+            - /mnt/media-server/movies:/data/movies
+            - /mnt/media-server/tv:/data/tvshows
+            - /mnt/media-server/plex:/config
+    restart: always
