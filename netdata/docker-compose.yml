@@ -5,6 +5,6 @@ netdata:
     net: "host"
     container_name: netdata
     volumes:
-          -v /proc:/host/proc:ro
-          -v /sys:/host/sys:ro
+      - /proc:/host/proc:ro
+      - /sys:/host/sys:ro
     restart: always
