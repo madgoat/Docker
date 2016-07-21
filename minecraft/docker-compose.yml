@@ -1,0 +1,9 @@
+minecraft:
+    image: madgoat/minecraft
+    ports:
+      - "25565:25565"
+    net: "host"
+    container_name: minecraft
+    volumes:
+      - /mnt/minecraft:/data
+    restart: always
