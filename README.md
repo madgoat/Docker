@@ -3,6 +3,8 @@ This is a collection of my docker files. Some of these are tweaked to my needs w
 
 Some, if not most of these containers are geared towards my home entertainment. My current setup is to use Sonarr to scrape for TV shows, Couchpotato to grab movies, nzbget to actually download them and Plex to play them.
 
+I have also included my minecraft server build.
+
 **My Setup**
 All are able to run comfortably on an old Dell E6440 with 16GB of RAM, with lots of processor power and RAM to spare.
 
