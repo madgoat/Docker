@@ -5,11 +5,11 @@
 
 export DEBIAN_FRONTEND=noninteractive
 
-while ! ping -c1 tools.linuxserver.io &>/dev/null; do :; done
+#while ! ping -c1 tools.linuxserver.io &>/dev/null; do :; done
 
 #The following error is not an error.
-VERSION=$(dpkg-query -W -f='${Version}' plexmediaserver)
-
+INSTALLED=$(dpkg-query -W -f='${Version}' plexmediaserver)
+VERSION=$(curl -s "https://plex.tv/downloads/latest/1?channel=8&build=linux-ubuntu-x86_64&distro=ubuntu&X-Plex-Token="| cut -d "/" -f 5 )
 
 #Get stuff from things.
 PLEX_TOKEN=$( sed -n 's/.*PlexOnlineToken="//p' "/config/Library/Application Support/Plex Media Server/Preferences.xml" | sed "s/\".*//")
@@ -19,7 +19,7 @@ PLEX_TOKEN=$( sed -n 's/.*PlexOnlineToken="//p' "/config/Library/Application Sup
 if [[ -z $VERSION && "$PLEXPASS" == "1" || $VERSION = "plexpass" ]]; then echo "VERSION=plexpass is depricated please use version latest"; fi
 
 
-#Start update rutine
+#Start update routine
 
 
 if [[ "$VERSION" = latest || "$VERSION" = plexpass ]]; then
