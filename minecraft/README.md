@@ -44,6 +44,8 @@ image name which is `overshard/minecraft:latest`.
  + `-d=true` allows this to run cleanly as a daemon, remove for debugging
  + `-p` is the port it connects to, `-p=host_port:docker_port`
 
+### TO DO
+ + Need to build an automated updater to pull down the latest version of the minecraft server.
 
 [0]: http://www.docker.io/gettingstarted/
 [1]: http://minecraft.net/

@@ -1,3 +1,0 @@
-#Privoxy
-
-My privoxy implimentation.
