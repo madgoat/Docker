@@ -1,6 +1,6 @@
 ## Usage
 **Using docker-compose**
-Modify the dock-compose.yml file to point to the correct paths of your media on your server.
+Modify the docker-compose.yml file to point to the correct paths of your media on your server.
 ```
 docker-compose up -d
 ```
@@ -52,6 +52,7 @@ In this instance `PUID=1001` and `PGID=1001`. To find yours use `id user` as bel
 
 * Shell access whilst the container is running: `docker exec -it plex /bin/bash`
 * Upgrade to the latest version: `docker restart plex`
+* Upgrade to the latest version: `docker-compose restart`
 * To monitor the logs of the container in realtime: `docker logs -f plex`
 
 ## Changelog
