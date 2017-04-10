@@ -5,8 +5,8 @@ sonarr:
     net: "host"
     container_name: sonarr
     volumes:
-            - /mnt/media-server/tv:/tv
-            - /mnt/media-server/sconfig:/config
-            - /mnt/media-server/completed:/completed
-            - /mnt/media-server/downloads:/downloads
+            - /mnt/tv:/tv
+            - /mnt/config/sonarr:/config
+            - /mnt/completed:/completed
+            - /mnt/downloads:/downloads
     restart: always

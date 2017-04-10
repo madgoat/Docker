@@ -5,6 +5,6 @@ couchpotato:
     net: "host"
     container_name: couchpotato
     volumes:
-            - /mnt/media-server/movies:/media
-            - /mnt/media-server/couchpotato:/datadir
+            - /mnt/movies:/media
+            - /mnt/config/couchpotato:/datadir
     restart: always

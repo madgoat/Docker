@@ -5,8 +5,8 @@ nzbget:
     net: "host"
     container_name: nzbget
     volumes:
-            - /mnt/media-server/tv:/tv
-            - /mnt/media-server/movies:/movies
-            - /mnt/media-server/downloads:/downloads
-            - /mnt/media-server/nconfig:/config
+            - /mnt/tv:/tv
+            - /mnt/movies:/movies
+            - /mnt/downloads:/downloads
+            - /mnt/config/nzbget:/config
     restart: always
