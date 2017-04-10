@@ -20,8 +20,6 @@ if [[ -z $VERSION && "$PLEXPASS" == "1" || $VERSION = "plexpass" ]]; then echo "
 
 
 #Start update routine
-
-
 if [[ "$VERSION" = latest || "$VERSION" = plexpass ]]; then
 	VERSION=$(curl -s "https://plex.tv/downloads/latest/1?channel=8&build=linux-ubuntu-x86_64&distro=ubuntu&X-Plex-Token=$PLEX_TOKEN"| cut -d "/" -f 5 )
 	echo "Target version: $VERSION set by: latest\plexpass"

@@ -1,5 +1,5 @@
 FROM linuxserver/baseimage
-MAINTAINER Stian Larsen <lonixx@gmail.com>
+MAINTAINER Ian Robertson <ian@madgoat.io> 
 
 # Install Plex
 RUN apt-get -q update && \

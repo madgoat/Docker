@@ -5,7 +5,7 @@ plex:
     net: "host"
     container_name: plex
     volumes:
-            - /mnt/media-server/movies:/data/movies
-            - /mnt/media-server/tv:/data/tvshows
-            - /mnt/media-server/plex:/config
+            - /mnt/movies:/data/movies
+            - /mnt/tv:/data/tvshows
+            - /mnt/config/plex:/config
     restart: always

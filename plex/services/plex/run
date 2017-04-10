@@ -1,4 +1,4 @@
 #!/bin/bash
 
 echo "Starting Plex Media Server."
-exec /sbin/setuser abc /usr/sbin/start_pms
+exec /sbin/setuser plex /usr/sbin/start_pms
